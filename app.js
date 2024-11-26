@@ -1,4 +1,4 @@
-/*Class Exercise
+//Class Exercise
 //Count down from 10 to 1.
 console.log("Class Exercise 1");
 for (let i = 10; i > 0; i--) {
@@ -78,11 +78,10 @@ for (let i = 1; i <= 20; i++) {
   }
   ifPrime = true;
 }
-*/
 
 //ALAB 308.3.1: Practical Loops
 //Part 1: Fizz Buzz
-
+console.log("Fizz Buzz Assignment");
 for (let i = 1; i <= 100; i++) {
   let fizz = false;
   let buzz = false;
@@ -101,4 +100,27 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
 //Part 2: Prime Time
+//declare n and find the next prime number
+console.log("Prime Time Assignment");
+let n = 31; //declare a number n
+let isPrime = true;
+
+//function to decide if a number is a prime number
+function isNumPrime(n) {
+  for (let y = 2; y <= n - 1; y++) {
+    if (n % y == 0) {
+      isPrime = false;
+    }
+  }
+  return isPrime; // return a boolean if the number is prime or not
+}
+
+do {
+  isPrime = true; //reset the value
+  n++; //increment the number
+} while (!isNumPrime(n)); //call the function and continue if the number is not prime
+
+console.log("Next Prime number is:", n);
+// End of Prime Time
